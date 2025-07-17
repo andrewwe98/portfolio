@@ -10,9 +10,12 @@
 
 </head>
 <body>
-    
+     <a href="../home.html" class="btn btn-primary">
+  <img src="home.jpg" alt="Home" style="width:20px; height:24px; vertical-align:middle; margin-right:px;">
+</a>
   <div class ="box" >
     <p><h1>Contact</h1></p>
+    <p>Push send once and it should send to my email. It will not refresh but will send.  </p>
      <form id = "contact-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -36,7 +39,7 @@
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
         emailjs.sendForm('service_fl8oaur', 'template_xnwf0tt', this)
-            .then(function(response) {
+            .then(function() {
                 alert('Message sent successfully!');
             }, function(error) {
                 alert('Failed to send message: ' + JSON.stringify(error));
