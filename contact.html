@@ -13,7 +13,7 @@
     
   <div class ="box" >
     <p><h1>Contact</h1></p>
-    <p>Push send once and it should send to my email. It will not refresh but will send.  </p>
+    <p>Feel free to reach out with any questions or feedback!</p>
      <form id = "contact-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -39,6 +39,7 @@
         emailjs.sendForm('service_fl8oaur', 'template_xnwf0tt', this)
             .then(function() {
                 alert('Message sent successfully!');
+                 document.querySelector('.box form').reset();
             }, function(error) {
                 alert('Failed to send message: ' + JSON.stringify(error));
             });
