@@ -1,7 +1,7 @@
 .box {
             width: 300px;   /* Long length */
             height: 700px;  /* Box height */
-            background: #e0e0e0;
+            background: transparent;
             border: 2px solid #333;
             margin: 20px auto;
             padding: 20px;
